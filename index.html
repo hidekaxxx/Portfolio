@@ -1,11 +1,225 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>HIDEKA F. | DESIGNER'S PORTFOLIO</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- アイコン表示用のFontAwesome (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- フォント (Montserrat) -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  
+
+  <!-- 背景の発光グラフィック効果 -->
+  <div class="bg-glow bg-glow-top-left"></div>
+  <div class="bg-glow bg-glow-bottom-right"></div>
+
+  <!-- ヘッダー -->
+  <header class="navbar">
+    <div class="logo">
+      <span class="logo-highlight">DESIGNER'S PORTFOLIO</span>
+      <span class="logo-divider">|</span>
+      <span class="logo-name">HIDEKA F.</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#works" class="active">WORKS</a>
+      <a href="#about">ABOUT</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
+  <!-- メインコンテンツ -->
+  <main class="container">
+
+    <!-- SECTION 1: WORKS -->
+    <section id="works" class="section">
+      <h2 class="section-title"><span class="neon-text-blue">WORKS</span> / 実績</h2>
+      <div class="works-grid">
+
+        <!-- CARD 1: BLUE (MACHOLAR) -->
+        <div class="card neon-blue">
+          <div class="card-screen">
+            <div class="screen-header">
+              <span>MACHOLAR</span>
+              <div class="dots"><span></span><span></span><span></span></div>
+            </div>
+            <div class="screen-body">
+              <h2>MACHOLAR</h2>
+              <p>Education Platform</p>
+              <div class="badge">UI/UX</div>
+            </div>
+          </div>
+          <div class="card-info">
+            <h3 class="card-title">MACHOLAR - Education Platform</h3>
+            <p class="card-subtitle">(Design & Dev)</p>
+            <div class="card-footer">
+              <div class="device-icons">
+                <i class="fa-solid fa-desktop"></i>
+                <i class="fa-solid fa-tablet-screen-button"></i>
+                <i class="fa-solid fa-mobile-screen"></i>
+              </div>
+              <a href="#" class="btn btn-blue">VIEW CASE</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2: ORANGE (CAFE HARMONY) -->
+        <div class="card neon-orange">
+          <div class="card-screen cafe-bg">
+            <div class="screen-header">
+              <span>Cafe Harmony</span>
+            </div>
+            <div class="screen-body">
+              <h2>CAFE HARMONY HP</h2>
+              <p>Cozy Cafe Site</p>
+            </div>
+          </div>
+          <div class="card-info">
+            <h3 class="card-title">CAFE HARMONY - Cozy Cafe Site</h3>
+            <p class="card-subtitle">(Web Design & UI/UX)</p>
+            <div class="card-footer">
+              <div class="device-icons">
+                <i class="fa-solid fa-mug-hot"></i>
+                <i class="fa-solid fa-leaf"></i>
+              </div>
+              <a href="#" class="btn btn-orange">VIEW CASE</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3: GREEN (AURORA CLOTHING) -->
+        <div class="card neon-green">
+          <div class="card-screen clothing-bg">
+            <div class="screen-header">
+              <span>FADORA</span>
+            </div>
+            <div class="screen-body dark-text">
+              <h2>AURORA CLOTHING</h2>
+            </div>
+          </div>
+          <div class="card-info">
+            <h3 class="card-title">AURORA CLOTHING - E-Commerce Shop</h3>
+            <p class="card-subtitle">(Web Design)</p>
+            <div class="card-footer">
+              <div class="device-icons">
+                <i class="fa-solid fa-shirt"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+              </div>
+              <a href="#" class="btn btn-green">VIEW CASE</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 4: PURPLE (NEON FLUX) -->
+        <div class="card neon-purple">
+          <div class="card-screen neon-bg">
+            <div class="screen-header">
+              <span>YUNA</span>
+            </div>
+            <div class="screen-body">
+              <h2>NEON FLUX</h2>
+            </div>
+          </div>
+          <div class="card-info">
+            <h3 class="card-title">NEON FLUX - Music Event LP</h3>
+            <p class="card-subtitle">(Web Design & Motion)</p>
+            <div class="card-footer">
+              <div class="device-icons">
+                <i class="fa-solid fa-sliders"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <a href="#" class="btn btn-purple">VIEW CASE</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: ABOUT (新設) -->
+    <section id="about" class="section">
+      <h2 class="section-title"><span class="neon-text-purple">ABOUT</span> / 私について</h2>
+      <div class="about-container">
+
+        <!-- プロフィール -->
+        <div class="about-profile">
+          <div class="profile-avatar">
+            <i class="fa-solid fa-user-astronaut"></i>
+          </div>
+          <div class="profile-text">
+            <h3>HIDEKA FUKUMOTO.</h3>
+            <p class="subtitle">Web Designer / UI/UX Designer</p>
+            <p class="description">
+              ユーザー体験（UX）を第一に考えたUIデザインと、印象に残るWebデザインを得意としています。
+              企業の課題解決に繋がるコンセプト設計からプロトタイピング、コーディング・モーション演出まで一貫して対応可能です。
+            </p>
+          </div>
+        </div>
+
+        <!-- スキルカード -->
+        <div class="skills-grid">
+          <div class="skill-card neon-purple">
+            <h4><i class="fa-solid fa-pen-nib"></i> Design & UI/UX</h4>
+            <ul>
+              <li>Figma / Adobe XD</li>
+              <li>Photoshop / Illustrator</li>
+              <li>Wireframing & Prototyping</li>
+              <li>Design System Creation</li>
+            </ul>
+          </div>
+          <div class="skill-card neon-blue">
+            <h4><i class="fa-solid fa-code"></i> Frontend Dev</h4>
+            <ul>
+              <li>HTML5 / CSS3 (Sass)</li>
+              <li>JavaScript (ES6+)</li>
+              <li>Responsive Web Design</li>
+              <li>Git / GitHub</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: CONTACT (新設) -->
+    <section id="contact" class="section">
+      <h2 class="section-title"><span class="neon-text-green">CONTACT</span> / お問い合わせ</h2>
+      <div class="contact-container">
+        <p class="contact-lead">お仕事のご依頼やご相談、ポートフォリオに関するお問い合わせはこちらからお気軽にご連絡ください。</p>
+
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('メッセージが送信されました！（デモ）');">
+          <div class="form-group">
+            <label for="name">お名前 / Name</label>
+            <input type="text" id="name" placeholder="山田 太郎" required>
+          </div>
+          <div class="form-group">
+            <label for="email">メールアドレス / Email</label>
+            <input type="email" id="email" placeholder="example@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="message">メッセージ / Message</label>
+            <textarea id="message" rows="5" placeholder="ご用件やご相談内容をご記入ください" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-green btn-submit">SEND MESSAGE</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="footer-title">HIDEKA F. PORTFOLIO</div>
+    <div class="social-links">
+      <a href="#" class="icon-ig"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" class="icon-in"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#" class="icon-tw"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
 </body>
+
 </html>
