@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HIDEKA F. | DESIGNER'S PORTFOLIO</title>
+  <title>HIDEKA F. | PORTFOLIO</title>
   <link rel="stylesheet" href="css/style.css">
   <!-- アイコン表示用のFontAwesome (CDN) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -26,7 +26,7 @@
       <span class="logo-name">HIDEKA F.</span>
     </div>
     <nav class="nav-links">
-      <a href="#works" class="active">WORKS</a>
+      <a href="#works">WORKS</a>
       <a href="#about">ABOUT</a>
       <a href="#contact">CONTACT</a>
     </nav>
@@ -39,21 +39,20 @@
       <h2 class="section-title"><span class="neon-text-blue">WORKS</span> / 実績</h2>
       <div class="works-grid">
 
-        <!-- CARD 1: BLUE (MACHOLAR) -->
-        <div class="card neon-blue">
-          <div class="card-screen">
+        <!-- CARD 1: RED (RED DOOR) -->
+        <div class="card neon-red">
+          <div class="card-screen bar-bg">
             <div class="screen-header">
-              <span>MACHOLAR</span>
+              <span>RED DOOR</span>
               <div class="dots"><span></span><span></span><span></span></div>
             </div>
             <div class="screen-body">
-              <h2>MACHOLAR</h2>
-              <p>Education Platform</p>
-              <div class="badge">UI/UX</div>
+              <h2>RED DOOR</h2>
+              <p>Night Cafe & Bar</p>
             </div>
           </div>
           <div class="card-info">
-            <h3 class="card-title">MACHOLAR - Education Platform</h3>
+            <h3 class="card-title">RED DOOR - Night Cafe & Bar</h3>
             <p class="card-subtitle">(Design & Dev)</p>
             <div class="card-footer">
               <div class="device-icons">
@@ -61,7 +60,7 @@
                 <i class="fa-solid fa-tablet-screen-button"></i>
                 <i class="fa-solid fa-mobile-screen"></i>
               </div>
-              <a href="#" class="btn btn-blue">VIEW CASE</a>
+              <a href="https://hidekaxxx.github.io/RedDoor/" class="btn btn-red">VIEW CASE</a>
             </div>
           </div>
         </div>
@@ -139,22 +138,22 @@
       </div>
     </section>
 
-    <!-- SECTION 2: ABOUT (新設) -->
+    <!-- SECTION 2: ABOUT -->
     <section id="about" class="section">
       <h2 class="section-title"><span class="neon-text-purple">ABOUT</span> / 私について</h2>
       <div class="about-container">
 
         <!-- プロフィール -->
-        <div class="about-profile">
+        <div class="about-profile neon-purple">
           <div class="profile-avatar">
             <i class="fa-solid fa-user-astronaut"></i>
           </div>
           <div class="profile-text">
             <h3>HIDEKA FUKUMOTO.</h3>
-            <p class="subtitle">Web Designer / UI/UX Designer</p>
             <p class="description">
-              ユーザー体験（UX）を第一に考えたUIデザインと、印象に残るWebデザインを得意としています。
-              企業の課題解決に繋がるコンセプト設計からプロトタイピング、コーディング・モーション演出まで一貫して対応可能です。
+              デザイナー兼フロントエンド開発者になるべく、ユーザー体験を重視したデザインを意識し日々勉強しています。<br>
+              UI/UXデザイン、レスポンシブWebデザイン、アニメーション実装など、これまで培ったスキルを活かし<br>
+              魅力的で使いやすいWebサイトやアプリケーションを開発します。
             </p>
           </div>
         </div>
@@ -170,7 +169,7 @@
               <li>Design System Creation</li>
             </ul>
           </div>
-          <div class="skill-card neon-blue">
+          <div class="skill-card neon-purple">
             <h4><i class="fa-solid fa-code"></i> Frontend Dev</h4>
             <ul>
               <li>HTML5 / CSS3 (Sass)</li>
@@ -184,13 +183,13 @@
       </div>
     </section>
 
-    <!-- SECTION 3: CONTACT (新設) -->
+    <!-- SECTION 3: CONTACT -->
     <section id="contact" class="section">
       <h2 class="section-title"><span class="neon-text-green">CONTACT</span> / お問い合わせ</h2>
       <div class="contact-container">
-        <p class="contact-lead">お仕事のご依頼やご相談、ポートフォリオに関するお問い合わせはこちらからお気軽にご連絡ください。</p>
+        <p class="contact-lead">こちらからお気軽にご連絡ください。</p>
 
-        <form class="contact-form" onsubmit="event.preventDefault(); alert('メッセージが送信されました！（デモ）');">
+        <form class="contact-form" onsubmit="event.preventDefault(送信完了); alert('メッセージが送信されました！');">
           <div class="form-group">
             <label for="name">お名前 / Name</label>
             <input type="text" id="name" placeholder="山田 太郎" required>
@@ -213,10 +212,7 @@
   <!-- フッター -->
   <footer class="footer">
     <div class="footer-title">HIDEKA F. PORTFOLIO</div>
-    <div class="social-links">
-      <a href="#" class="icon-ig"><i class="fa-brands fa-instagram"></i></a>
-      <a href="#" class="icon-in"><i class="fa-brands fa-linkedin-in"></i></a>
-      <a href="#" class="icon-tw"><i class="fa-brands fa-twitter"></i></a>
+    <a href="#">▲</a>
     </div>
   </footer>
   <script src="js/main.js"></script>

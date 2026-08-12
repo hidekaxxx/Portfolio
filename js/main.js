@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /* --------------------------------------------------
-   * 1. マウス追従ネオンスポットライト
+   * マウス追従ネオンスポットライト
    * -------------------------------------------------- */
   const glow = document.createElement('div');
   glow.classList.add('mouse-glow');
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* --------------------------------------------------
-   * 2. カードの3Dチルト（立体的な傾き）エフェクト
+   *  カードの3Dチルト（立体的な傾き）エフェクト
    * -------------------------------------------------- */
   const cards = document.querySelectorAll('.card');
 
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* --------------------------------------------------
-   * 3. スクロール時のふわっと出現アニメーション
+   * スクロール時のふわっと出現アニメーション
    * -------------------------------------------------- */
   const observerOptions = {
     root: null,
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* --------------------------------------------------
-   * 4. ナビゲーションのスムーズスクロール
+   * ナビゲーションのスムーズスクロール
    * -------------------------------------------------- */
   const navLinks = document.querySelectorAll('.nav-links a');
 
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 /* --------------------------------------------------
-   * 5. スクロール位置に合わせてナビゲーションの active を自動切り替え
+   *  スクロール位置に合わせてナビゲーションの active を自動切り替え
    * -------------------------------------------------- */
   const sections = document.querySelectorAll('.section');
 
@@ -109,3 +109,18 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+  /* --------------------------------------------------
+   * トップに戻る（↑）ボタンのスクロール制御
+   * -------------------------------------------------- */
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top');
+
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+});

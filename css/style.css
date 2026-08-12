@@ -6,10 +6,11 @@
   --text-muted: #a0a0b0;
 
   /* ネオンカラー */
-  --neon-blue: #00d2ff;
+  --neon-red: #c40815;
   --neon-orange: #ff6b00;
   --neon-green: #00ff88;
   --neon-purple: #c800ff;
+  --neon-blue: #00d2ff;
 }
 
 * {
@@ -58,7 +59,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 3rem;
+  padding-bottom: 1.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--bg-color);
 }
 
 .logo {
@@ -131,11 +136,11 @@ body {
 }
 
 /* ネオン個別に適用 */
-.neon-blue {
-  border: 2px solid var(--neon-blue);
+.neon-red {
+  border: 2px solid var(--neon-red);
   box-shadow:
-    0 0 15px rgba(0, 210, 255, 0.4),
-    inset 0 0 15px rgba(0, 210, 255, 0.1);
+    0 0 15px rgba(255, 0, 85, 0.4),
+    inset 0 0 15px rgba(255, 0, 85, 0.1);
 }
 
 .neon-orange {
@@ -192,6 +197,10 @@ body {
   margin-bottom: 0.2rem;
 }
 
+.bar-bg {
+  background: linear-gradient(135deg, #ff6b00, #c800ff);
+  color: #fff;
+}
 .cafe-bg {
   background: linear-gradient(135deg, #2b1704, #543213);
 }
@@ -208,7 +217,7 @@ body {
 
 .badge {
   display: inline-block;
-  background: var(--neon-blue);
+  background: var(--neon-red);
   color: #000;
   font-size: 0.7rem;
   font-weight: bold;
@@ -260,10 +269,10 @@ body {
   transform: scale(1.05);
 }
 
-.btn-blue {
+.btn-red {
   background-color: transparent;
-  border: 2px solid var(--neon-blue);
-  box-shadow: 0 0 10px var(--neon-blue);
+  border: 2px solid var(--neon-red);
+  box-shadow: 0 0 10px var(--neon-red);
 }
 
 .btn-orange {
@@ -342,7 +351,7 @@ body {
     margin: 0 0.8rem;
   }
 }
-/* --- 追加: マウス追従スポットライト --- */
+/* ---  マウス追従スポットライト --- */
 .mouse-glow {
   position: fixed;
   width: 350px;
@@ -362,7 +371,7 @@ body {
     height 0.3s;
 }
 
-/* --- 追加: スクロール出現アニメーション設定 --- */
+/* --- スクロール出現アニメーション設定 --- */
 .scroll-fade {
   opacity: 0;
   transform: translateY(40px);
@@ -386,7 +395,7 @@ body {
   transform-style: preserve-3d;
   will-change: transform;
 }
-/* --- 追加: セクション共通デザイン --- */
+/* ---  セクション共通デザイン --- */
 .section {
   padding-top: 5rem;
   margin-bottom: 4rem;
@@ -412,7 +421,7 @@ body {
   text-shadow: 0 0 10px var(--neon-green);
 }
 
-/* --- 追加: ABOUT セクション --- */
+/* --- ABOUT セクション --- */
 .about-container {
   display: flex;
   flex-direction: column;
@@ -498,7 +507,7 @@ body {
   color: var(--neon-blue);
 }
 
-/* --- 追加: CONTACT セクション --- */
+/* ---  CONTACT セクション --- */
 .contact-container {
   background: var(--card-bg);
   padding: 3rem;
