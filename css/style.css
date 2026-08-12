@@ -211,12 +211,14 @@ main {
   background: #09131d;
   border-radius: 12px;
   height: 220px;
-  padding: 1rem;
+  padding: 0.8rem 1rem 0 1rem;
   margin-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  position: relative;
 }
 
 .screen-header {
@@ -224,6 +226,9 @@ main {
   justify-content: space-between;
   font-size: 0.75rem;
   color: #7a8b9e;
+  padding-bottom: 0.6rem;
+  z-index: 2; /* 画像より上に表示 */
+  position: relative;
 }
 
 .dots span {
@@ -232,6 +237,33 @@ main {
   height: 6px;
   background-color: #555;
   border-radius: 50%;
+  margin-left: 2px;
+}
+
+.screen-body {
+  width: 100%;
+  height: calc(100% - 24px); /* ヘッダー分を引いた高さ */
+  margin-top: 0.4rem;
+  border-radius: 6px 6px 0 0;
+  overflow: hidden; /* はみ出た画像を隠す */
+  position: relative;
+}
+
+.screen-body img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* アスペクト比を保って表示 */
+  object-position: top; /* サイトの最上部を表示 */
+  /* スクロールアニメーションの設定 */
+  transition:
+    object-position 2.5s ease-in-out,
+    transform 0.5s ease;
+}
+
+/* ★カードにホバー時のエフェクト */
+.card:hover .screen-body img {
+  /* サイトの最下部までスクロール表示 */
+  object-position: bottom;
 }
 
 .screen-body h2 {
