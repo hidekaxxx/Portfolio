@@ -26,7 +26,7 @@ body {
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
-  padding: 2rem 4rem;
+  padding: 0;
 }
 
 /* --- 背景の発光グラデーション --- */
@@ -59,11 +59,20 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 1.5rem 0;
   position: sticky;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
-  background-color: var(--bg-color);
+
+  /* 背景色を少し透過させる */
+  background-color: 　rgba(13, 14, 21, 0.8) !important;
+  /* 背後をぼかす（すりガラス効果） */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  padding: 1.5rem 4rem;
+  box-sizing: border-box;
 }
 
 .logo {
@@ -82,9 +91,38 @@ body {
   color: #888;
 }
 
+/* --- HIDEKA F. のデザイン --- */
 .logo-name {
-  color: #ffb800;
-  text-shadow: 0 0 10px rgba(255, 184, 0, 0.5);
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  /* 文字の中身を透明にする */
+  color: transparent;
+  /* グラデーションのフチをつける */
+  -webkit-text-stroke: 1.5px #ff2a85;
+  /* 文字のグラデーションフチ表現（ブラウザ用） */
+  background: linear-gradient(90deg, #ff2a85, #ff8c00);
+  -webkit-background-clip: text;
+}
+
+.logo-name::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+
+  /* ピンク〜オレンジのグラデーション */
+  background: linear-gradient(90deg, #ff2a85, #ff8c00);
+  -webkit-background-clip: text;
+  color: transparent;
+
+  /* フチの太さ */
+  -webkit-text-stroke: 3px transparent;
+
+  /* ネオンの発光エフェクト */
+  filter: drop-shadow(0 0 5px rgba(255, 42, 133, 0.8))
+    drop-shadow(0 0 10px rgba(255, 140, 0, 0.6));
 }
 
 .nav-links a {
@@ -105,6 +143,10 @@ body {
 }
 
 /* --- メインコンテンツ（グリッド） --- */
+main {
+  padding: 2rem 4rem;
+}
+
 .container {
   max-width: 1300px;
   margin: 0 auto;
@@ -363,7 +405,7 @@ body {
     rgba(200, 0, 255, 0.05),
     transparent 70%
   );
-  pointer-events: none; /* マウス操作を邪魔しない */
+  pointer-events: none;
   transform: translate(-50%, -50%);
   z-index: 9999;
   transition:
@@ -386,7 +428,6 @@ body {
   transform: translateY(0);
 }
 
-/* 3Dチルト用の視点設定を親要素とカードに付与 */
 .works-grid {
   perspective: 1000px;
 }
