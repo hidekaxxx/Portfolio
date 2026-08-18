@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CONTACT | HIDEKA F. PORTFOLIO</title>
+  <meta name="description" content="HIDEKA F.へのお問い合わせフォームです。">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="bg-glow bg-glow-top-left"></div>
+  <div class="bg-glow bg-glow-bottom-right"></div>
+
+  <header class="navbar">
+    <div class="logo">
+      <span class="logo-highlight">DESIGNER'S PORTFOLIO</span>
+      <span class="logo-divider">|</span>
+      <span class="logo-name" data-text="HIDEKA F.">HIDEKA F.</span>
+    </div>
+    <a class="btn btn-green" href="index.html">BACK TO PORTFOLIO</a>
+  </header>
+
+  <main class="container contact-page">
+    <section class="contact-container">
+      <p class="contact-kicker">LET'S WORK TOGETHER</p>
+      <h1 class="contact-title">お問い合わせ<br><em>CONTACT FORM</em></h1>
+      <p class="contact-lead">制作のご相談やご質問など、お気軽にご連絡ください。</p>
+
+      <form class="contact-form" action="https://formsubmit.co/1d71e42b75af52ecc3e36b7714e025d7" method="POST">
+        <input type="text" name="_honey" style="display:none">
+        <input type="hidden" name="_subject" value="ポートフォリオからのお問い合わせ">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
+
+        <div class="form-group">
+          <label for="name">お名前 / Name</label>
+          <input type="text" id="name" name="name" placeholder="山田 太郎" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">メールアドレス / Email</label>
+          <input type="email" id="email" name="email" placeholder="example@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">メッセージ / Message</label>
+          <textarea id="message" name="message" rows="7" placeholder="ご用件やご相談内容をご記入ください" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-green btn-submit">SEND MESSAGE</button>
+      </form>
+
+      <a class="contact-back" href="index.html">← ポートフォリオに戻る</a>
+    </section>
+  </main>
+</body>
+
+</html>
